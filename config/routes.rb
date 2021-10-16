@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  # ここにpagesコントローラーのhomeアクションのルーティングを追加する
-  get 'pages/home'
+  # この行を編集する
+  root 'pages#home'
 end
