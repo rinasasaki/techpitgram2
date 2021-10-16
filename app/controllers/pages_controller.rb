@@ -5,4 +5,6 @@ class PagesController < ApplicationController
   end
   # ==========ここまで追加する==========
 
+
+  
 end
