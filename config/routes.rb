@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: 'user'
   # usersコントローラーのshowアクションのルーティング
 
-  resources :posts, only: %i(new create) do
+  resources :posts, only: %i(new create index) do
     resources :photos, only: %i(create)
   end
-  
+
 end
