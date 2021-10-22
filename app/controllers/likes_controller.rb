@@ -10,7 +10,6 @@ class LikesController < ApplicationController
     end
   end
 
-  # ==========ここから追加する==========
   def destroy
     @like = Like.find_by(id: params[:id])
     @post = @like.post
@@ -18,10 +17,10 @@ class LikesController < ApplicationController
       respond_to :js
     end
   end
-  # ==========ここまで追加する==========
 
   private
     def like_params
       params.permit(:post_id)
     end
 end
+
