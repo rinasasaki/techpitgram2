@@ -1,6 +1,7 @@
-class CommentsController < ApplicationController
-
   class CommentsController < ApplicationController
+    
+    before_action :authenticate_user!
+    
     def create
       @comment = Comment.new(comment_params)
       @post = @comment.post
@@ -20,7 +21,8 @@ class CommentsController < ApplicationController
         flash[:alert] = "コメントの削除に失敗しました"
       end
     end
-    
+
+
   
     private
       def comment_params
