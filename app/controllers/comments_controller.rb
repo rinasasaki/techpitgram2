@@ -10,6 +10,7 @@
       else
         flash[:alert] = "コメントに失敗しました"
       end
+    end
   
 
     def destroy
@@ -23,11 +24,14 @@
     end
 
 
+
   
     private
       def comment_params
         params.required(:comment).permit(:user_id, :post_id, :comment)
       end
-  end
 
-end
+
+
+    end
+
