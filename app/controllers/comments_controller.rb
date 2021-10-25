@@ -5,9 +5,10 @@
     def create
       @comment = Comment.new(comment_params)
       @post = @comment.post
-      if @comment.save
-        respond_to :js
-      else
+      begin @comment.save
+        respond_to do |format|
+          format.js
+        rescue
         flash[:alert] = "コメントに失敗しました"
       end
     end
@@ -34,4 +35,5 @@
 
 
     end
+  end
 
