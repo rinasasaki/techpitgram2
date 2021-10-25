@@ -3,7 +3,3 @@ $('#like-icon-post-<%= @post.id.to_s %>').
 $('#like-text-post-<%= @post.id.to_s %>').
   html('<%= j render "posts/like_text", { likes: @post.likes } %>');
 
-  $('#comment-post-<%= @post.id.to_s %>').
-  html('<%= j render "posts/comment_list", { post: @post } %>');
-$('#comment-form-post-<%= @post.id.to_s %> #comment_comment').val("");
-

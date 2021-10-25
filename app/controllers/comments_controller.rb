@@ -32,8 +32,6 @@
         params.required(:comment).permit(:user_id, :post_id, :comment)
       end
 
-
-
     end
   end
 
