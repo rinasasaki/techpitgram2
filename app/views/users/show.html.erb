@@ -32,10 +32,11 @@
       <%# if @user == current_user メールアドレスはログインしているユーザーしか見れないように、if @user == current_user というコードで条件分岐していたが、name に関しては誰にも見られて大丈夫なので、if式を削除%>
       <div class="row">
         <p>
-          <%= @user.email %>
+          <%#= @user.emailをnameに変更 %>
+          <%= @user.name %>
         </p>
       </div>
-      <% end %>
+      <%# endも削除 %>
     </div>
   </div>
-</div>
+  </div>
